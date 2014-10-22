@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/house_main_mint_color"
+        >
+        <ViewSwitcher 
+            android:id="@+id/switchCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <Button 
+            android:id="@+id/btnCancel"
+             android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:background="@color/house_main_mint_color"
+            android:layout_marginLeft="5dp"
+            android:text="취소"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
+        <ImageView
+             android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:background="@color/house_main_mint_color"
+            android:layout_marginLeft="5dp"
+            />
+        </ViewSwitcher>
+
+        <TextView
+            android:id="@+id/txt_cameraRoll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:gravity="center"
+            android:text="카메라롤"
+            android:textColor="#FFFFFF"
+            android:textSize="17.5sp"
+            android:textStyle="bold" />
+
+         <Button
+            android:id="@+id/btnGalleryOk"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            
+            android:background="@color/house_main_mint_color"
+            android:text="다음"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </LinearLayout>
+  
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+         >
+
+        <GridView
+            android:id="@+id/gridGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+ 	        android:numColumns="3"
+         
+         android:fadingEdgeLength="0px"
+   			android:listSelector="@null"
+        
+            
+            tools:listitem="@layout/gallery_item" >
+        </GridView>
+
+        <ImageView
+            android:id="@+id/imgNoMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/no_media" />
+    </FrameLayout>
+
+  
+
+</LinearLayout>
