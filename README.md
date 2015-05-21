@@ -1,4 +1,4 @@
-# House.Android
+# 하우스 - 인테리어 SNS 앱
 
 + Android
   + Spring-Android-REST-Template
